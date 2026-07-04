@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos de Times - Card SUS</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        .btn-voltar {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #6c757d;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .grid-fotos {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Exibe duas fotos por linha no celular */
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .grid-fotos img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn-whats {
+            display: block;
+            background-color: #25d366;
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="btn-voltar">⬅️ Voltar ao Menu</a>
+        <h2>⚽ Modelos: Times do Coração</h2>
+        
+        <div class="grid-fotos">
+            <!-- COLOQUE OS NOMES DAS SUAS FOTOS AQUI ABAIXO -->
+            <img src="foto-time1.jpg" alt="Modelo Time 1">
+            <img src="foto-time2.jpg" alt="Modelo Time 2">
+            <img src="foto-time3.jpg" alt="Modelo Time 3">
+            <img src="foto-time4.jpg" alt="Modelo Time 4">
+        </div>
+
+        <a href="https://wa.me/seu-numero-com-ddd" target="_blank" class="btn-whats">💬 Encomendar pelo WhatsApp</a>
+    </div>
+
+</body>
+</html>
