@@ -1,48 +1,73 @@
-# 📇 Catálogo de Cards do SUS Personalizados
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Virtual - Cards do SUS</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        p {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        .btn-categoria {
+            display: block;
+            background-color: #ffffff;
+            color: #333;
+            text-decoration: none;
+            padding: 18px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 16px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+            border: 1px solid #e2e8f0;
+        }
+        /* Efeito ao passar o mouse ou tocar na tela */
+        .btn-categoria:hover, .btn-categoria:active {
+            background-color: #007bff;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,123,255,0.2);
+            border-color: #007bff;
+        }
+    </style>
+</head>
+<body>
 
-Bem-vindo ao meu catálogo virtual! Escolha uma categoria abaixo para navegar pelos modelos disponíveis:
+    <div class="container">
+        <h1>SUBLIMArt Personalizados</h1>
+        <p>Escolha uma categoria para ver os modelos de Card SUS:</p>
 
-## 🗂️ Selecione a Categoria:
-[🔹 INFANTIL MASCULINO](#-infantil-masculino) &nbsp;|&nbsp; [🔸 INFANTIL FEMININO](#-infantil-feminino) &nbsp;|&nbsp; [🔹 ADULTO FEMININO](#-adulto-feminino) &nbsp;|&nbsp; [🔸 TIMES](#-times) &nbsp;|&nbsp; [🔹 CRISTÃO](#-cristão)
+        <!-- BOTÕES DO MENU INICIAL -->
+        <a href="infantil-masculino.html" class="btn-categoria">🧸 INFANTIL MASCULINO</a>
+        <a href="infantil-feminino.html" class="btn-categoria">🦄 INFANTIL FEMININO</a>
+        <a href="adulto-feminino.html" class="btn-categoria">🌸 ADULTO FEMININO</a>
+        <a href="times.html" class="btn-categoria">⚽ TIMES</a>
+        <a href="cristao.html" class="btn-categoria">🕊️ CRISTÃO</a>
+    </div>
 
----
-
-## 🧸 INFANTIL MASCULINO
-Modelos divertidos, super-heróis, desenhos animados e carros para os meninos.
-*(Coloque a foto abaixo alterando o nome do arquivo)*
-![Card SUS Infantil Masculino](infantil1.png)
-
----
-
-## 🦄 INFANTIL FEMININO
-Modelos fofos, princesas, bonecas e temas coloridos para as meninas.
-*(Coloque a foto abaixo alterando o nome do arquivo)*
-![Card SUS Infantil Feminino](infantil-femi1.png)
-
----
-
-## 🌸 ADULTO FEMININO
-Designs elegantes, florais, minimalistas e modernos para mulheres.
-*(Coloque a foto abaixo alterando o nome do arquivo)*
-![Card SUS Adulto Feminino](adult-femi1.png)
-
----
-
-## ⚽ TIMES
-O escudo e as cores do seu time do coração no seu cartão do SUS.
-*(Coloque a foto abaixo alterando o nome do arquivo)*
-![Card SUS Times](modelo1.png)
-
----
-
-## 🕊️ CRISTÃO
-Modelos com versículos bíblicos, imagens sacras e designs religiosos.
-*(Coloque a foto abaixo alterando o nome do arquivo)*
-![Card SUS Cristão](cristao1.png)
-
----
-
-## 🛍️ Como Encomendar?
-Gostou de algum modelo ou quer um tema exclusivo? Entre em contato diretamente pelo WhatsApp para enviar seus dados e fechar seu pedido!
-
-👉 [**Clique aqui para falar no WhatsApp**](https://wa.me/seu-numero-com-ddd)
+</body>
+</html>
