@@ -3,24 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo Virtual - Cards do SUS</title>
-    <link rel="stylesheet" href="estilo-catalogo.css">
-</head>
-<body>
-
+    <title>SUBLIMArt - Catálogo de Cards do SUS</title>
     
-    <div class="container">
-        <h1>Catálogo Virtual - Cards do SUS</h1>
-        <p>Escolha uma categoria para ver os modelos de Card SUS:</p>
+    <link rel="stylesheet" href="estilo-catalogo.css">
+    
+    <style>
+        /* Ajustes exclusivos para os botões grandes do menu inicial de categorias */
+        .menu-inicial {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 25px;
+        }
 
-        <!-- BOTÕES DO MENU INICIAL -->
-        <a href="infantil-masculino.html" class="btn-categoria">🧸 INFANTIL MASCULINO</a>
-        <a href="infantil-feminino.html" class="btn-categoria">🦄 INFANTIL FEMININO</a>
-        <a href="adulto-feminino.html" class="btn-categoria">🌸 ADULTO FEMININO</a>
-        <a href="times.html" class="btn-categoria">⚽ TIMES</a>
-        <a href="cristao.html" class="btn-categoria">🕊️ CRISTÃO</a>
+        .btn-categoria {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px;
+            background: white;
+            color: #1e293b;
+            text-decoration: none;
+            border-radius: 16px;
+            font-weight: 700;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+        }
+
+        .btn-categoria:hover {
+            transform: translateY(-2px);
+            background-color: #f8fafc;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+            color: #3b82f6; /* Destaca o texto em azul sutil ao passar o mouse */
+        }
+        
+        .subtitulo {
+            color: #64748b;
+            font-size: 15px;
+            margin-top: -10px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+
+    <div class="container">
+
+        <h2>💳 SUBLIMArt Personalizados</h2>
+        <p class="subtitulo">Escolha uma categoria para ver os modelos de Card SUS:</p>
+        
+        <div class="menu-inicial">
+            <a href="infantil-masculino.html" class="btn-categoria">
+                🧸 Infantil Masculino
+            </a>
+            <a href="infantil-feminino.html" class="btn-categoria">
+                🦄 Infantil Feminino
+            </a>
+            <a href="adulto-feminino.html" class="btn-categoria">
+                🌸 Adulto Feminino
+            </a>
+            <a href="times.html" class="btn-categoria">
+                ⚽ Times
+            </a>
+            <a href="cristao.html" class="btn-categoria">
+                🙏 Cristão
+            </a>
+        </div>
         
     </div>
+
+    <script>
+        // Bloqueia clique direito e pressionamento longo na página inicial
+        document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
 
 </body>
 </html>
