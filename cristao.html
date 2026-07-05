@@ -56,6 +56,14 @@
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             cursor: pointer;
+            
+            /* --- SEGURANÇA NO CSS (Bloqueia toque longo no celular) --- */
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
 
         .btn-whats {
@@ -111,7 +119,8 @@
         }
     </style>
 </head>
-<body>
+<!-- Trava extra direto no clique do corpo do site -->
+<body oncontextmenu="return false;">
 
     <div class="container">
 
@@ -164,20 +173,21 @@
             popup.style.display = 'none';
         }
 
-        // Fecha o pop-up ao clicar na área escura de fundo
+        // CORRIGIDO: Fecha o pop-up ao clicar na área escura de fundo (Fechando a chave corretamente)
         window.onclick = function(event) {
             if (event.target == popup) {
                 fecharPopup();
             }
+        }
 
-            // Bloqueia o clique direito do rato e o clique longo no telemóvel
+        // CORRIGIDO: Agora estas travas rodam soltas no site todo o tempo!
+        // Bloqueia o clique direito do rato e o clique longo no telemóvel
         document.addEventListener('contextmenu', event => event.preventDefault());
 
         // Bloqueia o ato de arrastar qualquer imagem do site
         document.querySelectorAll('.grid-fotos img').forEach(img => {
             img.addEventListener('dragstart', event => event.preventDefault());
         });
-        }
     </script>
 
 </body>
