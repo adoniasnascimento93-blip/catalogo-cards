@@ -225,8 +225,17 @@
         window.onclick = function(event) {
             if (event.target == popup) {
                 fecharPopup();
-            }
+                        }
         }
+
+        // CORRIGIDO: Agora estas travas rodam soltas no site todo o tempo!
+        // Bloqueia o clique direito do rato e o clique longo no telemóvel
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // Bloqueia o ato de arrastar qualquer imagem do site
+        document.querySelectorAll('.grid-fotos img').forEach(img => {
+            img.addEventListener('dragstart', event => event.preventDefault());
+        });
     </script>
 
 </body>
