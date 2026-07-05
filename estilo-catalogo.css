@@ -4,8 +4,12 @@
 body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     
-    /* COR PADRÃO DO FUNDO DA PÁGINA (Pode alterar aqui) */
-    background-color: #f1f5f9; 
+    /* IMAGEM DE FUNDO PADRÃO (Verde com Ondas Amarelas/Douradas) */
+    background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Mantém o fundo fixo enquanto o cliente rola as fotos */
     
     margin: 0;
     padding: 20px 15px;
@@ -15,27 +19,38 @@ body {
     min-height: 100vh;
 }
 
-/* Container com efeito de vidro fosco elegante (Glassmorphism) */
+/* Container com efeito de vidro fosco (Glassmorphism) perfeito para fundos com imagem */
 .container {
     max-width: 600px;
     width: 100%;
     text-align: center;
-    background: rgba(255, 255, 255, 0.85); /* Ficou um pouco mais opaco para destacar no fundo sólido */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.15); /* Vidro translúcido que deixa ver a imagem atrás */
+    backdrop-filter: blur(20px); /* Desfoca o fundo para dar destaque aos cartões */
+    -webkit-backdrop-filter: blur(20px);
     padding: 25px 20px;
     border-radius: 24px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     box-sizing: border-box;
 }
 
+/* TÍTULO PRINCIPAL: Amarelo Ouro de Destaque */
 h2 {
-    color: #1e293b;
-    font-size: 22px;
-    font-weight: 700;
+    color: #facc15; 
+    font-size: 24px;
+    font-weight: 800;
     margin-top: 5px;
-    margin-bottom: 25px;
+    margin-bottom: 22px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); /* Sombra maior para destacar sobre a imagem */
+    letter-spacing: 0.5px;
+}
+
+/* Subtítulo ajustado para leitura na Página Inicial */
+.subtitulo {
+    color: #ffffff !important;
+    font-size: 15px;
+    font-weight: 500;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 /* ==========================================
@@ -44,33 +59,48 @@ h2 {
 .btn-voltar {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #64748b;
-    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
     text-decoration: none;
     border-radius: 12px;
     font-weight: 600;
     font-size: 14px;
-    transition: background 0.2s;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    transition: background 0.2s, transform 0.2s;
 }
 .btn-voltar:hover {
-    background-color: #475569;
+    background-color: rgba(255, 255, 255, 0.35);
+    transform: translateY(-1px);
 }
 
 .btn-whats {
     display: block;
-    background: linear-gradient(135deg, #25d366 0%, #20ba5a 100%);
+    background: linear-gradient(135deg, #25d366 0%, #16a34a 100%);
     color: white;
     text-decoration: none;
     padding: 16px;
     border-radius: 16px;
     font-weight: 700;
     font-size: 18px;
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.2);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
     transition: transform 0.2s, box-shadow 0.2s;
 }
 .btn-whats:hover {
     transform: translateY(-1px);
-    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
+}
+
+/* Ajuste dos botões de categorias na Página Inicial (index.html) */
+.menu-inicial .btn-categoria {
+    background: rgba(255, 255, 255, 0.9) !important;
+    color: #064e3b !important; 
+    border: 1px solid rgba(255, 255, 255, 1) !important;
+}
+.menu-inicial .btn-categoria:hover {
+    background: #facc15 !important; /* Vira amarelo ao tocar */
+    color: #064e3b !important;
+    box-shadow: 0 8px 20px rgba(250, 204, 21, 0.4) !important;
 }
 
 /* ==========================================
@@ -78,7 +108,7 @@ h2 {
    ========================================== */
 .grid-fotos {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 colunas no celular */
+    grid-template-columns: 1fr 1fr;
     gap: 18px;
     margin-bottom: 30px;
 }
@@ -89,30 +119,29 @@ h2 {
     align-items: center;
 }
 
-/* Etiqueta com o nome limpo do modelo */
+/* Etiqueta com o código do modelo: Amarelo com texto verde escuro */
 .card-label {
     font-size: 11px;
-    font-weight: 700;
-    color: #475569;
+    font-weight: 800;
+    color: #064e3b;
     margin-bottom: 8px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 4px 10px;
+    background-color: #facc15;
+    padding: 4px 12px;
     border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
-    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo da imagem com proteção nativa */
+/* Imagens dos cartões */
 .grid-fotos img {
     width: 100%;
     border-radius: 14px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
     
-    /* SEGURANÇA: Bloqueia o clique longo para salvar no celular */
+    /* SEGURANÇA: Bloqueia clique longo */
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -121,8 +150,8 @@ h2 {
     user-select: none;
 }
 .grid-fotos img:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.09);
+    transform: translateY(-3px);
+    box-shadow: 0 14px 25px rgba(0, 0, 0, 0.5);
 }
 
 /* ==========================================
@@ -135,9 +164,9 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(15, 23, 42, 0.4);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    background-color: rgba(2, 44, 34, 0.8); 
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -149,11 +178,14 @@ h2 {
     text-align: center;
     max-width: 300px;
     width: 85%;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+}
+.popup-box h3 {
+    color: #064e3b;
 }
 .btn-confirmar {
     display: block;
-    background: linear-gradient(135deg, #25d366 0%, #20ba5a 100%);
+    background: linear-gradient(135deg, #25d366 0%, #16a34a 100%);
     color: white;
     text-decoration: none;
     padding: 14px;
@@ -161,7 +193,7 @@ h2 {
     font-weight: 700;
     margin-top: 20px;
     font-size: 16px;
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.15);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
 }
 .btn-cancelar {
     display: inline-block;
