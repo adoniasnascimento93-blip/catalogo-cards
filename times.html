@@ -26,7 +26,6 @@
             color: white;
             text-decoration: none;
             border-radius: 8px;
-            margin-bottom: 20px;
             font-weight: bold;
         }
         .grid-fotos {
@@ -39,6 +38,7 @@
             width: 100%;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            cursor: pointer; /* Transforma o mouse em mãozinha ao passar na foto */
         }
         .btn-whats {
             display: block;
@@ -50,6 +50,47 @@
             font-weight: bold;
             font-size: 18px;
         }
+
+        /* ESTILO DO POP-UP (MODAL) */
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .popup-box {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 300px;
+            width: 80%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .btn-confirmar {
+            display: block;
+            background-color: #25d366;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        .btn-cancelar {
+            display: inline-block;
+            color: #666;
+            text-decoration: none;
+            margin-top: 15px;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
@@ -59,31 +100,58 @@
         <h2>⚽ Modelos: Times do Coração</h2>
         
         <div class="grid-fotos">
-            <!-- COLOQUE OS NOMES DAS SUAS FOTOS AQUI ABAIXO -->
-            <img src="modelo1.png" alt="Modelo Time 1">
-            <img src="modelo2.png" alt="Modelo Time 2">
-            <img src="modelo3.png" alt="Modelo Time 3">
-            <img src="modelo4.png" alt="Modelo Time 4">
-            <img src="modelo5.png" alt="Modelo Time 5">
-            <img src="modelo6.png" alt="Modelo Time 6">
-            <img src="modelo7.png" alt="Modelo Time 7">
-            <img src="modelo8.png" alt="Modelo Time 8">
-            <img src="modelo9.png" alt="Modelo Time 9">
-            <img src="modelo10.png" alt="Modelo Time 10">
-            <img src="modelo11.png" alt="Modelo Time 11">
-            <img src="modelo12.png" alt="Modelo Time 12">
-            <img src="modelo13.png" alt="Modelo Time 13">
-            <img src="modelo14.png" alt="Modelo Time 14">
-            <img src="modelo15.png" alt="Modelo Time 15">
-            <img src="modelo16.png" alt="Modelo Time 16">
-            <img src="modelo17.png" alt="Modelo Time 17">
+            <!-- ADICIONADO O data-codigo E O onclick EM CADA IMAGEM -->
+            <img src="modelo1.png" alt="Modelo Time 1" data-codigo="card_time_1" onclick="abrirPopup(this)">
+            <img src="modelo2.png" alt="Modelo Time 2" data-codigo="card_time_2" onclick="abrirPopup(this)">
+            <img src="modelo3.png" alt="Modelo Time 3" data-codigo="card_time_3" onclick="abrirPopup(this)">
+            <img src="modelo4.png" alt="Modelo Time 4" data-codigo="card_time_4" onclick="abrirPopup(this)">
+            <img src="modelo5.png" alt="Modelo Time 5" data-codigo="card_time_5" onclick="abrirPopup(this)">
+            <img src="modelo6.png" alt="Modelo Time 6" data-codigo="card_time_6" onclick="abrirPopup(this)">
+            <img src="modelo7.png" alt="Modelo Time 7" data-codigo="card_time_7" onclick="abrirPopup(this)">
+            <img src="modelo8.png" alt="Modelo Time 8" data-codigo="card_time_8" onclick="abrirPopup(this)">
+            <img src="modelo9.png" alt="Modelo Time 9" data-codigo="card_time_9" onclick="abrirPopup(this)">
+            <img src="modelo10.png" alt="Modelo Time 10" data-codigo="card_time_10" onclick="abrirPopup(this)">
+            <img src="modelo11.png" alt="Modelo Time 11" data-codigo="card_time_11" onclick="abrirPopup(this)">
+            <img src="modelo12.png" alt="Modelo Time 12" data-codigo="card_time_12" onclick="abrirPopup(this)">
+            <img src="modelo13.png" alt="Modelo Time 13" data-codigo="card_time_13" onclick="abrirPopup(this)">
+            <img src="modelo14.png" alt="Modelo Time 14" data-codigo="card_time_14" onclick="abrirPopup(this)">
+            <img src="modelo15.png" alt="Modelo Time 15" data-codigo="card_time_15" onclick="abrirPopup(this)">
+            <img src="modelo16.png" alt="Modelo Time 16" data-codigo="card_time_16" onclick="abrirPopup(this)">
+            <img src="modelo17.png" alt="Modelo Time 17" data-codigo="card_time_17" onclick="abrirPopup(this)">
         </div>
 
         <a href="https://wa.me/5592992914876" target="_blank" class="btn-whats">💬 Encomendar pelo WhatsApp</a>
-<!-- BOTAO VOLTAR LOGO ABAIXO (Adicionei uma margem no topo para desgrudar do WhatsApp) -->
         <a href="index.html" class="btn-voltar" style="margin-top: 20px; margin-bottom: 0;">⬅️ Voltar ao Menu</a>
         
     </div>
+
+    <!-- POP-UP (MODAL) -->
+    <div class="popup-overlay" id="meuPopup">
+        <div class="popup-box">
+            <h3 style="margin-top:0; color:#333;">Gostou deste modelo?</h3>
+            <p style="color:#666;">Clique abaixo para enviar o pedido deste modelo para o nosso WhatsApp.</p>
+            <a href="#" id="linkWhatsPedido" target="_blank" class="btn-confirmar">QUERO ESTE CARD</a>
+            <a href="#" onclick="fecharPopup()" class="btn-cancelar">Voltar e ver outros</a>
+        </div>
+    </div>
+
+    <!-- SCRIPT PARA FUNCIONAMENTO DO POP-UP E MENSAGEM -->
+    <script>
+        const numeroWhats = "5592992914876"; 
+
+        function abrirPopup(elemento) {
+            const codigoCard = elemento.getAttribute('data-codigo');
+            const textoMensagem = `Pedido:%0A${codigoCard}`;
+            const linkCompleto = `https://wa.me/${numeroWhats}?text=${textoMensagem}`;
+            
+            document.getElementById('linkWhatsPedido').href = linkCompleto;
+            document.getElementById('meuPopup').style.display = 'flex';
+        }
+
+        function fecharPopup() {
+            document.getElementById('meuPopup').style.display = 'none';
+        }
+    </script>
 
 </body>
 </html>
