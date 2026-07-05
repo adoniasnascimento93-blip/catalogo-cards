@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos Infantil Masculino - Card SUS</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        .btn-voltar {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #6c757d;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        .grid-fotos {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Exibe duas fotos por linha no celular */
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        /* ESTILO DO BLOCO DE CADA CARTÃO */
+        .card-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card-label {
+            font-size: 13px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            background-color: #e2e8f0;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        .grid-fotos img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+
+        .btn-whats {
+            display: block;
+            background-color: #25d366;
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* ESTILO DO POP-UP (MODAL) */
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .popup-box {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 300px;
+            width: 80%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .btn-confirmar {
+            display: block;
+            background-color: #25d366;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        .btn-cancelar {
+            display: inline-block;
+            color: #666;
+            text-decoration: none;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h2>🧸 Modelos: Infantil Masculino</h2>
+        
+        <div class="grid-fotos">
+            <div class="card-box"><span class="card-label">infantil 1</span><img src="infantil1.png" alt="Modelo Infantil 1" data-codigo="infantil 1" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 2</span><img src="infantil2.png" alt="Modelo Infantil 2" data-codigo="infantil 2" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 3</span><img src="infantil3.png" alt="Modelo Infantil 3" data-codigo="infantil 3" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 4</span><img src="infantil4.png" alt="Modelo Infantil 4" data-codigo="infantil 4" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 5</span><img src="infantil5.png" alt="Modelo Infantil 5" data-codigo="infantil 5" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 6</span><img src="infantil6.png" alt="Modelo Infantil 6" data-codigo="infantil 6" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 7</span><img src="infantil7.png" alt="Modelo Infantil 7" data-codigo="infantil 7" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 8</span><img src="infantil8.png" alt="Modelo Infantil 8" data-codigo="infantil 8" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 9</span><img src="infantil9.png" alt="Modelo Infantil 9" data-codigo="infantil 9" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 10</span><img src="infantil10.png" alt="Modelo Infantil 10" data-codigo="infantil 10" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 11</span><img src="infantil11.png" alt="Modelo Infantil 11" data-codigo="infantil 11" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 12</span><img src="infantil12.png" alt="Modelo Infantil 12" data-codigo="infantil 12" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 13</span><img src="infantil13.png" alt="Modelo Infantil 13" data-codigo="infantil 13" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 14</span><img src="infantil14.png" alt="Modelo Infantil 14" data-codigo="infantil 14" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 15</span><img src="infantil15.png" alt="Modelo Infantil 15" data-codigo="infantil 15" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 16</span><img src="infantil16.png" alt="Modelo Infantil 16" data-codigo="infantil 16" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 17</span><img src="infantil17.png" alt="Modelo Infantil 17" data-codigo="infantil 17" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 18</span><img src="infantil18.png" alt="Modelo Infantil 18" data-codigo="infantil 18" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 19</span><img src="infantil19.png" alt="Modelo Infantil 19" data-codigo="infantil 19" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 20</span><img src="infantil20.png" alt="Modelo Infantil 20" data-codigo="infantil 20" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 21</span><img src="infantil21.png" alt="Modelo Infantil 21" data-codigo="infantil 21" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 22</span><img src="infantil22.png" alt="Modelo Infantil 22" data-codigo="infantil 22" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 23</span><img src="infantil23.png" alt="Modelo Infantil 23" data-codigo="infantil 23" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 24</span><img src="infantil24.png" alt="Modelo Infantil 24" data-codigo="infantil 24" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 25</span><img src="infantil25.png" alt="Modelo Infantil 25" data-codigo="infantil 25" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 26</span><img src="infantil26.png" alt="Modelo Infantil 26" data-codigo="infantil 26" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 27</span><img src="infantil27.png" alt="Modelo Infantil 27" data-codigo="infantil 27" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 28</span><img src="infantil28.png" alt="Modelo Infantil 28" data-codigo="infantil 28" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 29</span><img src="infantil29.png" alt="Modelo Infantil 29" data-codigo="infantil 29" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 30</span><img src="infantil30.png" alt="Modelo Infantil 30" data-codigo="infantil 30" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 31</span><img src="infantil31.png" alt="Modelo Infantil 31" data-codigo="infantil 31" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 32</span><img src="infantil32.png" alt="Modelo Infantil 32" data-codigo="infantil 32" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 33</span><img src="infantil33.png" alt="Modelo Infantil 33" data-codigo="infantil 33" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 34</span><img src="infantil34.png" alt="Modelo Infantil 34" data-codigo="infantil 34" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 35</span><img src="infantil35.png" alt="Modelo Infantil 35" data-codigo="infantil 35" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 36</span><img src="infantil36.png" alt="Modelo Infantil 36" data-codigo="infantil 36" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 37</span><img src="infantil37.png" alt="Modelo Infantil 37" data-codigo="infantil 37" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 38</span><img src="infantil38.png" alt="Modelo Infantil 38" data-codigo="infantil 38" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">infantil 39</span><img src="infantil39.png" alt="Modelo Infantil 39" data-codigo="infantil 39" onclick="abrirPopup(this)"></div>
+        </div>
+
+        <a href="https://wa.me/5592992914876" target="_blank" class="btn-whats">💬 Encomendar pelo WhatsApp</a>
+        <a href="index.html" class="btn-voltar" style="margin-top: 20px; margin-bottom: 0;">⬅️ Voltar ao Menu</a>
+        
+    </div>
+
+    <div class="popup-overlay" id="meuPopup">
+        <div class="popup-box">
+            <h3 style="margin-top:0; color:#333;">Gostou deste modelo?</h3>
+            <p style="color:#666;">Clique abaixo para enviar o pedido deste modelo para o nosso WhatsApp.</p>
+            <a href="#" id="linkWhatsPedido" target="_blank" class="btn-confirmar">QUERO ESTE CARD</a>
+            <a href="#" onclick="fecharPopup()" class="btn-cancelar">Voltar e ver outros</a>
+        </div>
+    </div>
+
+    <script>
+        const numeroWhats = "5592992914876"; 
+        const popup = document.getElementById('meuPopup');
+
+        function abrirPopup(elemento) {
+            const codigoCard = elemento.getAttribute('data-codigo');
+            
+            const textoMensagem = encodeURIComponent(`Pedido:\n${codigoCard}`);
+            const linkCompleto = `https://wa.me/${numeroWhats}?text=${textoMensagem}`;
+            
+            document.getElementById('linkWhatsPedido').href = linkCompleto;
+            popup.style.display = 'flex';
+        }
+
+        function fecharPopup() {
+            popup.style.display = 'none';
+        }
+
+        // Fecha o pop-up ao clicar na área escura
+        window.onclick = function(event) {
+            if (event.target == popup) {
+                fecharPopup();
+            }
+        }
+    </script>
+
+</body>
+</html>
