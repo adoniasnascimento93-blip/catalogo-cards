@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos Adulto Feminino - Card SUS</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        .btn-voltar {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #6c757d;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        .grid-fotos {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Duas fotos por linha no celular */
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        /* ESTILO DO BLOCO DE CADA CARTÃO */
+        .card-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card-label {
+            font-size: 13px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            background-color: #e2e8f0;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        .grid-fotos img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+
+        .btn-whats {
+            display: block;
+            background-color: #25d366;
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* ESTILO DO POP-UP (MODAL) */
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .popup-box {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 300px;
+            width: 80%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .btn-confirmar {
+            display: block;
+            background-color: #25d366;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        .btn-cancelar {
+            display: inline-block;
+            color: #666;
+            text-decoration: none;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h2>🌸 Modelos: Adulto Feminino</h2>
+        
+        <div class="grid-fotos">
+            <div class="card-box"><span class="card-label">adulto feminino 1</span><img src="adult-femi1.png" alt="Modelo Adulto Feminino 1" data-codigo="adulto feminino 1" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">adulto feminino 2</span><img src="adult-femi2.png" alt="Modelo Adulto Feminino 2" data-codigo="adulto feminino 2" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">adulto feminino 3</span><img src="adult-femi3.png" alt="Modelo Adulto Feminino 3" data-codigo="adulto feminino 3" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">adulto feminino 4</span><img src="adult-femi4.png" alt="Modelo Adulto Feminino 4" data-codigo="adulto feminino 4" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">adulto feminino 5</span><img src="adult-femi5.png" alt="Modelo Adulto Feminino 5" data-codigo="adulto feminino 5" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">adulto feminino 6</span><img src="adult-femi6.png" alt="Modelo Adulto Feminino 6" data-codigo="adulto feminino 6" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">adulto feminino 7</span><img src="adult-femi7.png" alt="Modelo Adulto Feminino 7" data-codigo="adulto feminino 7" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">adulto feminino 8</span><img src="adult-femi8.png" alt="Modelo Adulto Feminino 8" data-codigo="adulto feminino 8" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">adulto feminino 9</span><img src="adult-femi9.png" alt="Modelo Adulto Feminino 9" data-codigo="adulto feminino 9" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">adulto feminino 10</span><img src="adult-femi10.png" alt="Modelo Adulto Feminino 10" data-codigo="adulto feminino 10" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">adulto feminino 11</span><img src="adult-femi11.png" alt="Modelo Adulto Feminino 11" data-codigo="adulto feminino 11" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">adulto feminino 12</span><img src="adult-femi12.png" alt="Modelo Adulto Feminino 12" data-codigo="adulto feminino 12" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">adulto feminino 13</span><img src="adult-femi13.png" alt="Modelo Adulto Feminino 13" data-codigo="adulto feminino 13" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">adulto feminino 14</span><img src="adult-femi14.png" alt="Modelo Adulto Feminino 14" data-codigo="adulto feminino 14" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">adulto feminino 15</span><img src="adult-femi15.png" alt="Modelo Adulto Feminino 15" data-codigo="adulto feminino 15" onclick="abrirPopup(this)"></div>
+        </div>
+
+        <a href="https://wa.me/5592992914876" target="_blank" class="btn-whats">💬 Encomendar pelo WhatsApp</a>
+        <a href="index.html" class="btn-voltar" style="margin-top: 20px; margin-bottom: 0;">⬅️ Voltar ao Menu</a>
+        
+    </div>
+
+    <div class="popup-overlay" id="meuPopup">
+        <div class="popup-box">
+            <h3 style="margin-top:0; color:#333;">Gostou deste modelo?</h3>
+            <p style="color:#666;">Clique abaixo para enviar o pedido deste modelo para o nosso WhatsApp.</p>
+            <a href="#" id="linkWhatsPedido" target="_blank" class="btn-confirmar">QUERO ESTE CARD</a>
+            <a href="#" onclick="fecharPopup()" class="btn-cancelar">Voltar e ver outros</a>
+        </div>
+    </div>
+
+    <script>
+        const numeroWhats = "5592992914876"; 
+        const popup = document.getElementById('meuPopup');
+
+        function abrirPopup(elemento) {
+            const codigoCard = elemento.getAttribute('data-codigo');
+            
+            const textoMensagem = encodeURIComponent(`Pedido:\n${codigoCard}`);
+            const linkCompleto = `https://wa.me/${numeroWhats}?text=${textoMensagem}`;
+            
+            document.getElementById('linkWhatsPedido').href = linkCompleto;
+            popup.style.display = 'flex';
+        }
+
+        function fecharPopup() {
+            popup.style.display = 'none';
+        }
+
+        // Fecha o pop-up ao clicar na área escura do fundo
+        window.onclick = function(event) {
+            if (event.target == popup) {
+                fecharPopup();
+            }
+        }
+    </script>
+
+</body>
+</html>
