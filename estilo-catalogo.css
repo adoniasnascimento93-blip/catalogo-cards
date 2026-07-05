@@ -1,0 +1,172 @@
+/* ==========================================
+   DESIGN BASE E FUNDO DO SITE (SUBLIMArt)
+   ========================================== */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    /* Gradiente moderno, suave e profissional */
+    background: linear-gradient(135deg, #e2e8f0 0%, #f1f5f9 50%, #eff6ff 100%);
+    background-attachment: fixed;
+    margin: 0;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container com efeito de vidro fosco elegante (Glassmorphism) */
+.container {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 25px 20px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-sizing: border-box;
+}
+
+h2 {
+    color: #1e293b;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+/* ==========================================
+   BOTÕES DE NAVEGAÇÃO E AÇÃO
+   ========================================== */
+.btn-voltar {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #64748b;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+.btn-voltar:hover {
+    background-color: #475569;
+}
+
+.btn-whats {
+    display: block;
+    background: linear-gradient(135deg, #25d366 0%, #20ba5a 100%);
+    color: white;
+    text-decoration: none;
+    padding: 16px;
+    border-radius: 16px;
+    font-weight: 700;
+    font-size: 18px;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-whats:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+}
+
+/* ==========================================
+   GRADE DE CARTÕES (CARDS)
+   ========================================== */
+.grid-fotos {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 colunas no celular */
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.card-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Etiqueta com o nome limpo do modelo */
+.card-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #475569;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 4px 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Estilo da imagem com proteção nativa */
+.grid-fotos img {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    
+    /* SEGURANÇA: Bloqueia o clique longo para salvar no celular */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.grid-fotos img:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.09);
+}
+
+/* ==========================================
+   ESTILO DA JANELA POP-UP (MODAL)
+   ========================================== */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.popup-box {
+    background-color: white;
+    padding: 30px 25px;
+    border-radius: 24px;
+    text-align: center;
+    max-width: 300px;
+    width: 85%;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+.btn-confirmar {
+    display: block;
+    background: linear-gradient(135deg, #25d366 0%, #20ba5a 100%);
+    color: white;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: 700;
+    margin-top: 20px;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.15);
+}
+.btn-cancelar {
+    display: inline-block;
+    color: #64748b;
+    text-decoration: none;
+    margin-top: 18px;
+    font-size: 14px;
+    font-weight: 600;
+}
