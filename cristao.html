@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos Cristãos - Card SUS</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        .btn-voltar {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #6c757d;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        .grid-fotos {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Duas fotos por linha no telemóvel/celular */
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        /* ESTILO DO BLOCO DE CADA CARTÃO */
+        .card-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card-label {
+            font-size: 13px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            background-color: #e2e8f0;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        .grid-fotos img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+
+        .btn-whats {
+            display: block;
+            background-color: #25d366;
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* ESTILO DO POP-UP (MODAL) */
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .popup-box {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 300px;
+            width: 80%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .btn-confirmar {
+            display: block;
+            background-color: #25d366;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        .btn-cancelar {
+            display: inline-block;
+            color: #666;
+            text-decoration: none;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h2>🙏 Modelos: Linha Cristã</h2>
+        
+        <div class="grid-fotos">
+            <div class="card-box"><span class="card-label">cristao 1</span><img src="cristao1.png" alt="Modelo Cristão 1" data-codigo="cristao 1" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">cristao 2</span><img src="cristao2.png" alt="Modelo Cristão 2" data-codigo="cristao 2" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">cristao 3</span><img src="cristao3.png" alt="Modelo Cristão 3" data-codigo="cristao 3" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">cristao 4</span><img src="cristao4.png" alt="Modelo Cristão 4" data-codigo="cristao 4" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">cristao 5</span><img src="cristao5.png" alt="Modelo Cristão 5" data-codigo="cristao 5" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">cristao 6</span><img src="cristao6.png" alt="Modelo Cristão 6" data-codigo="cristao 6" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">cristao 7</span><img src="cristao7.png" alt="Modelo Cristão 7" data-codigo="cristao 7" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">cristao 8</span><img src="cristao8.png" alt="Modelo Cristão 8" data-codigo="cristao 8" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">cristao 9</span><img src="cristao9.png" alt="Modelo Cristão 9" data-codigo="cristao 9" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">cristao 10</span><img src="cristao10.png" alt="Modelo Cristão 10" data-codigo="cristao 10" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">cristao 11</span><img src="cristao11.png" alt="Modelo Cristão 11" data-codigo="cristao 11" onclick="abrirPopup(this)"></div>
+            <div class="card-box"><span class="card-label">cristao 12</span><img src="cristao12.png" alt="Modelo Cristão 12" data-codigo="cristao 12" onclick="abrirPopup(this)"></div>
+        </div>
+
+        <a href="https://wa.me/5592992914876" target="_blank" class="btn-whats">💬 Encomendar pelo WhatsApp</a>
+        <a href="index.html" class="btn-voltar" style="margin-top: 20px; margin-bottom: 0;">⬅️ Voltar ao Menu</a>
+        
+    </div>
+
+    <div class="popup-overlay" id="meuPopup">
+        <div class="popup-box">
+            <h3 style="margin-top:0; color:#333;">Gostou deste modelo?</h3>
+            <p style="color:#666;">Clique abaixo para enviar o pedido deste modelo para o nosso WhatsApp.</p>
+            <a href="#" id="linkWhatsPedido" target="_blank" class="btn-confirmar">QUERO ESTE CARD</a>
+            <a href="#" onclick="fecharPopup()" class="btn-cancelar">Voltar e ver outros</a>
+        </div>
+    </div>
+
+    <script>
+        const numeroWhats = "5592992914876"; 
+        const popup = document.getElementById('meuPopup');
+
+        function abrirPopup(elemento) {
+            const codigoCard = elemento.getAttribute('data-codigo');
+            
+            const textoMensagem = encodeURIComponent(`Pedido:\n${codigoCard}`);
+            const linkCompleto = `https://wa.me/${numeroWhats}?text=${textoMensagem}`;
+            
+            document.getElementById('linkWhatsPedido').href = linkCompleto;
+            popup.style.display = 'flex';
+        }
+
+        function fecharPopup() {
+            popup.style.display = 'none';
+        }
+
+        // Fecha o pop-up ao clicar na área escura de fundo
+        window.onclick = function(event) {
+            if (event.target == popup) {
+                fecharPopup();
+            }
+        }
+    </script>
+
+</body>
+</html>
