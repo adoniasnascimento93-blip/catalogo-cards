@@ -34,12 +34,30 @@
             gap: 15px;
             margin-bottom: 30px;
         }
+        
+        /* ESTILO DO BLOCO DE CADA CARTÃO */
+        .card-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card-label {
+            font-size: 13px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            background-color: #e2e8f0;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
         .grid-fotos img {
             width: 100%;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            cursor: pointer; /* Transforma o mouse em mãozinha ao passar na foto */
+            cursor: pointer;
         }
+
         .btn-whats {
             display: block;
             background-color: #25d366;
@@ -100,24 +118,74 @@
         <h2>⚽ Modelos: Times do Coração</h2>
         
         <div class="grid-fotos">
-            <!-- ADICIONADO O data-codigo E O onclick EM CADA IMAGEM -->
-            <img src="modelo1.png" alt="Modelo Time 1" data-codigo="card_time_1" onclick="abrirPopup(this)">
-            <img src="modelo2.png" alt="Modelo Time 2" data-codigo="card_time_2" onclick="abrirPopup(this)">
-            <img src="modelo3.png" alt="Modelo Time 3" data-codigo="card_time_3" onclick="abrirPopup(this)">
-            <img src="modelo4.png" alt="Modelo Time 4" data-codigo="card_time_4" onclick="abrirPopup(this)">
-            <img src="modelo5.png" alt="Modelo Time 5" data-codigo="card_time_5" onclick="abrirPopup(this)">
-            <img src="modelo6.png" alt="Modelo Time 6" data-codigo="card_time_6" onclick="abrirPopup(this)">
-            <img src="modelo7.png" alt="Modelo Time 7" data-codigo="card_time_7" onclick="abrirPopup(this)">
-            <img src="modelo8.png" alt="Modelo Time 8" data-codigo="card_time_8" onclick="abrirPopup(this)">
-            <img src="modelo9.png" alt="Modelo Time 9" data-codigo="card_time_9" onclick="abrirPopup(this)">
-            <img src="modelo10.png" alt="Modelo Time 10" data-codigo="card_time_10" onclick="abrirPopup(this)">
-            <img src="modelo11.png" alt="Modelo Time 11" data-codigo="card_time_11" onclick="abrirPopup(this)">
-            <img src="modelo12.png" alt="Modelo Time 12" data-codigo="card_time_12" onclick="abrirPopup(this)">
-            <img src="modelo13.png" alt="Modelo Time 13" data-codigo="card_time_13" onclick="abrirPopup(this)">
-            <img src="modelo14.png" alt="Modelo Time 14" data-codigo="card_time_14" onclick="abrirPopup(this)">
-            <img src="modelo15.png" alt="Modelo Time 15" data-codigo="card_time_15" onclick="abrirPopup(this)">
-            <img src="modelo16.png" alt="Modelo Time 16" data-codigo="card_time_16" onclick="abrirPopup(this)">
-            <img src="modelo17.png" alt="Modelo Time 17" data-codigo="card_time_17" onclick="abrirPopup(this)">
+            <div class="card-box">
+                <span class="card-label">card time 1</span>
+                <img src="modelo1.png" alt="Modelo Time 1" data-codigo="card time 1" onclick="abrirPopup(this)">
+            </div>
+            <div class="card-box">
+                <span class="card-label">card time 2</span>
+                <img src="modelo2.png" alt="Modelo Time 2" data-codigo="card time 2" onclick="abrirPopup(this)">
+            </div>
+            <div class="card-box">
+                <span class="card-label">card time 3</span>
+                <img src="modelo3.png" alt="Modelo Time 3" data-codigo="card time 3" onclick="abrirPopup(this)">
+            </div>
+            <div class="card-box">
+                <span class="card-label">card time 4</span>
+                <img src="modelo4.png" alt="Modelo Time 4" data-codigo="card time 4" onclick="abrirPopup(this)">
+            </div>
+            <div class="card-box">
+                <span class="card-label">card time 5</span>
+                <img src="modelo5.png" alt="Modelo Time 5" data-codigo="card time 5" onclick="abrirPopup(this)">
+            </div>
+            <div class="card-box">
+                <span class="card-label">card time 6</span>
+                <img src="modelo6.png" alt="Modelo Time 6" data-codigo="card time 6" onclick="abrirPopup(this)">
+            </div>
+            <div class="card-box">
+                <span class="card-label">card time 7</span>
+                <img src="modelo7.png" alt="Modelo Time 7" data-codigo="card time 7" onclick="abrirPopup(this)">
+            </div>
+            <div class="card-box">
+                <span class="card-label">card time 8</span>
+                <img src="modelo8.png" alt="Modelo Time 8" data-codigo="card time 8" onclick="abrirPopup(this)">
+            </div>
+            <div class="card-box">
+                <span class="card-label">card time 9</span>
+                <img src="modelo9.png" alt="Modelo Time 9" data-codigo="card time 9" onclick="abrirPopup(this)">
+            </div>
+            <div class="card-box">
+                <span class="card-label">card time 10</span>
+                <img src="modelo10.png" alt="Modelo Time 10" data-codigo="card time 10" onclick="abrirPopup(this)">
+            </div>
+            <div class="card-box">
+                <span class="card-label">card time 11</span>
+                <img src="modelo11.png" alt="Modelo Time 11" data-codigo="card time 11" onclick="abrirPopup(this)">
+            </div>
+            <div class="card-box">
+                <span class="card-label">card time 12</span>
+                <img src="modelo12.png" alt="Modelo Time 12" data-codigo="card time 12" onclick="abrirPopup(this)">
+            </div>
+            <div class="card-box">
+                <span class="card-label">card time 13</span>
+                <img src="modelo13.png" alt="Modelo Time 13" data-codigo="card time 13" onclick="abrirPopup(this)">
+            </div>
+            <div class="card-box">
+                <span class="card-label">card time 14</span>
+                <img src="modelo14.png" alt="Modelo Time 14" data-codigo="card time 14" onclick="abrirPopup(this)">
+            </div>
+            <div class="card-box">
+                <span class="card-label">card time 15</span>
+                <img src="modelo15.png" alt="Modelo Time 15" data-codigo="card time 15" onclick="abrirPopup(this)">
+            </div>
+            <div class="card-box">
+                <span class="card-label">card time 16</span>
+                <img src="modelo16.png" alt="Modelo Time 16" data-codigo="card time 16" onclick="abrirPopup(this)">
+            </div>
+            <div class="card-box">
+                <span class="card-label">card time 17</span>
+                <img src="modelo17.png" alt="Modelo Time 17" data-codigo="card time 17" onclick="abrirPopup(this)">
+            </div>
         </div>
 
         <a href="https://wa.me/5592992914876" target="_blank" class="btn-whats">💬 Encomendar pelo WhatsApp</a>
@@ -125,7 +193,6 @@
         
     </div>
 
-    <!-- POP-UP (MODAL) -->
     <div class="popup-overlay" id="meuPopup">
         <div class="popup-box">
             <h3 style="margin-top:0; color:#333;">Gostou deste modelo?</h3>
@@ -135,21 +202,30 @@
         </div>
     </div>
 
-    <!-- SCRIPT PARA FUNCIONAMENTO DO POP-UP E MENSAGEM -->
     <script>
         const numeroWhats = "5592992914876"; 
+        const popup = document.getElementById('meuPopup');
 
         function abrirPopup(elemento) {
             const codigoCard = elemento.getAttribute('data-codigo');
-            const textoMensagem = `Pedido:%0A${codigoCard}`;
+            
+            // encodeURIComponent cuida dos espaços para o link do WhatsApp funcionar perfeitamente
+            const textoMensagem = encodeURIComponent(`Pedido:\n${codigoCard}`);
             const linkCompleto = `https://wa.me/${numeroWhats}?text=${textoMensagem}`;
             
             document.getElementById('linkWhatsPedido').href = linkCompleto;
-            document.getElementById('meuPopup').style.display = 'flex';
+            popup.style.display = 'flex';
         }
 
         function fecharPopup() {
-            document.getElementById('meuPopup').style.display = 'none';
+            popup.style.display = 'none';
+        }
+
+        // Fecha o pop-up se clicar fora da caixinha branca
+        window.onclick = function(event) {
+            if (event.target == popup) {
+                fecharPopup();
+            }
         }
     </script>
 
