@@ -6,7 +6,7 @@
     <title>Modelos de Times - Card SUS</title>
     <link rel="stylesheet" href="estilo-catalogo.css">
 </head>
-<body>
+<body oncontextmenu="return false;">
 
     <div class="container">
 
@@ -83,32 +83,30 @@
             </div>
         </div>
 
-        <a href="https://wa.me/5592992914876" target="_blank" class="btn-whats">💬 Encomendar pelo WhatsApp</a>
+        <!-- REMOVIDO: Botão de WhatsApp Geral -->
         <a href="index.html" class="btn-voltar" style="margin-top: 20px; margin-bottom: 0;">⬅️ Voltar ao Menu</a>
         
     </div>
 
+    <!-- JANELA POP-UP DE COMPARTILHAMENTO -->
     <div class="popup-overlay" id="meuPopup">
         <div class="popup-box">
-            <h3 style="margin-top:0; color:#333;">Gostou deste modelo?</h3>
-            <p style="color:#666;">Clique abaixo para enviar o pedido deste modelo para o nosso WhatsApp.</p>
-            <a href="#" id="linkWhatsPedido" target="_blank" class="btn-confirmar">QUERO ESTE CARD</a>
+            <h3 style="margin-top:0; color:#1e293b; font-weight: 700;">Gostou deste modelo?</h3>
+            <p style="color:#64748b; font-size: 15px; line-height: 1.5;">Clique abaixo para compartilhar este modelo diretamente com quem vai produzir seu card.</p>
+            
+            <!-- Botão modificado para realizar o compartilhamento nativo -->
+            <button onclick="compartilharPedido()" class="btn-confirmar" style="width: 100%; border: none; cursor: pointer;">ENVIAR PEDIDO</button>
+            
             <a href="#" onclick="fecharPopup()" class="btn-cancelar">Voltar e ver outros</a>
         </div>
     </div>
 
     <script>
-        const numeroWhats = "5592992914876"; 
         const popup = document.getElementById('meuPopup');
+        let codigoSelecionado = ""; // Guarda o código do cartão temporariamente
 
         function abrirPopup(elemento) {
-            const codigoCard = elemento.getAttribute('data-codigo');
-            
-            // encodeURIComponent cuida dos espaços para o link do WhatsApp funcionar perfeitamente
-            const textoMensagem = encodeURIComponent(`Pedido:\n${codigoCard}`);
-            const linkCompleto = `https://wa.me/${numeroWhats}?text=${textoMensagem}`;
-            
-            document.getElementById('linkWhatsPedido').href = linkCompleto;
+            codigoSelecionado = elemento.getAttribute('data-codigo');
             popup.style.display = 'flex';
         }
 
@@ -116,18 +114,38 @@
             popup.style.display = 'none';
         }
 
-        // Fecha o pop-up se clicar fora da caixinha branca
+        // Nova função de compartilhamento nativo independente
+        async function compartilharPedido() {
+            const textoMensagem = `Pedido:\n${codigoSelecionado}`;
+
+            // Abre o painel de compartilhamento nativo do dispositivo
+            if (navigator.share) {
+                try {
+                    await navigator.share({
+                        text: textoMensagem
+                    });
+                    fecharPopup();
+                } catch (err) {
+                    console.log("Erro ao compartilhar: ", err);
+                }
+            } else {
+                // Alternativa caso o navegador não ofereça suporte nativo
+                navigator.clipboard.writeText(textoMensagem);
+                alert("Código copiado para a sua área de transferência! Cole na conversa com seu vendedor.");
+                fecharPopup();
+            }
+        }
+
+        // Fecha o pop-up ao clicar na área escura do fundo
         window.onclick = function(event) {
             if (event.target == popup) {
                 fecharPopup();
-                        }
+            }
         }
 
-        // CORRIGIDO: Agora estas travas rodam soltas no site todo o tempo!
-        // Bloqueia o clique direito do rato e o clique longo no telemóvel
+        // BLOQUEIOS DE SEGURANÇA ANTICÓPIA
         document.addEventListener('contextmenu', event => event.preventDefault());
 
-        // Bloqueia o ato de arrastar qualquer imagem do site
         document.querySelectorAll('.grid-fotos img').forEach(img => {
             img.addEventListener('dragstart', event => event.preventDefault());
         });
